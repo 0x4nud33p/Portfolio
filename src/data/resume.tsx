@@ -45,7 +45,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
-    { href: "/gadgets", icon: Icons.shop, label: "Gadgets" },
+    // { href: "/gadgets", icon: Icons.shop, label: "Gadgets" },
   ],
   contact: {
     email: "anudeepavula009@gmail.com",
