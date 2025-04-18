@@ -200,12 +200,12 @@ export default function Page() {
           </div>
         </section>
 
-        {/* <section id="contributions">
+        <section id="contributions">
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
             <h2 className="text-xl font-bold font-sans">GitHub Contributions</h2>
             <GithubContributions />
           </BlurFade>
-        </section> */}
+        </section>
         <section id="projects">
           <div className="flex min-h-0 flex-col gap-y-3 font-sans">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -303,46 +303,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* <section id="videos">
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <div className="space-y-4 font-sans">
-              <h2 className="text-xl font-bold">Recent Videos</h2>
-              <div className="grid gap-6 sm:grid-cols-2">
-                {DATA.videos.slice(-2).map((video, idx) => (
-                  <BlurFade key={video.url} delay={BLUR_FADE_DELAY * 11 + idx * 0.05}>
-                    <div className="relative overflow-hidden rounded-xl">
-                      <BorderBeam
-                        size={50}
-                        duration={4}
-                        colorFrom="#ffaa40"
-                        colorTo="#9c40ff"
-                        className="from-transparent via-foreground/20 to-transparent"
-                        transition={{
-                          type: "spring",
-                          stiffness: 60,
-                          damping: 20,
-                        }}
-                      />
-                      <VideoCard video={video} />
-                    </div>
-                  </BlurFade>
-                ))}
-                <BlurFade delay={BLUR_FADE_DELAY * 12}>
-                  <Link
-                    href="/videos"
-                    className="mt-4 block"
-                  >
-                    <RainbowButton
-                      className="w-full sm:w-[160px] px-4 py-2 group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-bold text-center"
-                    >
-                      All Videos →
-                    </RainbowButton>
-                  </Link>
-                </BlurFade>
-              </div>
-            </div>
-          </BlurFade>
-        </section> */}
+       
 
         <section id="contact">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>

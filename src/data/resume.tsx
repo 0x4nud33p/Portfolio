@@ -45,7 +45,6 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
     { href: "/projects", icon: FolderIcon, label: "Projects" },
-    // { href: "/gadgets", icon: Icons.shop, label: "Gadgets" },
   ],
   contact: {
     email: "anudeepavula009@gmail.com",
@@ -94,26 +93,26 @@ export const DATA = {
       },
     },
   },
-  // work: [
-  //   {
-  //     company: "",
-  //     href: "",
-  //     badges: [],
-  //     location: "",
-  //     title: "",
-  //     logoUrl: "",
-  //     start: "",
-  //     end: "",
-  //     description:
-  //       "",
-  //   },
-  // ],
+  work: [
+    {
+      company: "MailCheap",
+      href: "",
+      badges: [],
+      location: "",
+      title: "",
+      logoUrl: "",
+      start: "",
+      end: "",
+      description:
+        "",
+    },
+  ],
   education: [
     {
       school: "Seshadri Rao Gudlavalleru Engineering Collge, Gudlavalleru",
-      href: "https://tat.ac.in/",
+      href: "https://www.gecgudlavalleru.ac.in/",
       degree: "B.Tech in Information Technology",
-      logoUrl: "/buildspace.webp",
+      logoUrl: "",
       start: "2022",
       end: "2026",
     },
