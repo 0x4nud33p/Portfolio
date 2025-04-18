@@ -342,35 +342,7 @@ export default function Page() {
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-sm text-muted-foreground space-y-2">
                   <p>© {new Date().getFullYear()} {DATA.name}. All rights reserved.</p>
-                  {/* <p>
-                    Open source under{' '}
-                    <a 
-                      href="https://opensource.org/licenses/MIT" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-foreground"
-                    >
-                      MIT License
-                    </a>
-                    {' '}and available on{' '}
-                    <a 
-                      href="https://github.com/StarKnightt/prasendev" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-foreground"
-                    >
-                      GitHub
-                    </a>
-                  </p> */}
                 </div>
-                {/* <div className="flex space-x-4">
-                  <Link href="/sitemap.xml" className="text-sm text-muted-foreground hover:text-foreground">
-                    Sitemap
-                  </Link>
-                  <Link href="/rss.xml" className="text-sm text-muted-foreground hover:text-foreground">
-                    RSS
-                  </Link>
-                </div> */}
               </div>
             </div>
           </BlurFade>
