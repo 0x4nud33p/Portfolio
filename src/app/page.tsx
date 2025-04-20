@@ -6,13 +6,13 @@ import { ResumeCard } from "@/components/resume-card";
 import { VideoCard } from "@/components/video-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Image from "next/image";
 import Markdown from "react-markdown";
 import { PersonSchema } from "@/components/schema/person-schema";
-import { Metadata } from 'next';
+import { Metadata } from "next";
 import { Icons } from "@/components/icons";
 import ShinyButton from "@/components/ui/shiny-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -36,43 +36,60 @@ export const metadata: Metadata = {
     siteName: DATA.name,
     images: [
       {
-        url: 'https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg',
+        url: "https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg",
         width: 1200,
         height: 630,
         alt: `${DATA.name}'s Portfolio`,
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: DATA.name,
     description: DATA.summary,
-    creator: '@' + '0x4nud33p',
-    images: ['https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg'],
+    creator: "@" + "0x4nud33p",
+    images: [
+      "https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg",
+    ],
   },
 };
 
-const BlogCard = dynamic(() => import("@/components/blog-card").then(mod => mod.BlogCard), {
-  ssr: true,
-  loading: () => <BlogSkeleton />
-});
+const BlogCard = dynamic(
+  () => import("@/components/blog-card").then((mod) => mod.BlogCard),
+  {
+    ssr: true,
+    loading: () => <BlogSkeleton />,
+  }
+);
 
-const GithubContributions = dynamic(() => import("@/components/github-calendar").then(mod => mod.GithubContributions), {
-  ssr: false,
-  loading: () => <GithubSkeleton />
-});
+const GithubContributions = dynamic(
+  () =>
+    import("@/components/github-calendar").then(
+      (mod) => mod.GithubContributions
+    ),
+  {
+    ssr: false,
+    loading: () => <GithubSkeleton />,
+  }
+);
 
-const ProjectCardDynamic = dynamic(() => import("@/components/project-card").then(mod => mod.ProjectCard), {
-  ssr: true,
-  loading: () => <ProjectSkeleton />
-});
+const ProjectCardDynamic = dynamic(
+  () => import("@/components/project-card").then((mod) => mod.ProjectCard),
+  {
+    ssr: true,
+    loading: () => <ProjectSkeleton />,
+  }
+);
 
-const HackathonCardDynamic = dynamic(() => import("@/components/hackathon-card").then(mod => mod.HackathonCard), {
-  ssr: true,
-  loading: () => <HackathonSkeleton />
-});
+const HackathonCardDynamic = dynamic(
+  () => import("@/components/hackathon-card").then((mod) => mod.HackathonCard),
+  {
+    ssr: true,
+    loading: () => <HackathonSkeleton />,
+  }
+);
 
 export default function Page() {
   return (
@@ -80,7 +97,7 @@ export default function Page() {
       <div className="fixed inset-0 -z-10 overflow-hidden font-sans">
         {/* <GhibliSkyBackground /> */}
       </div>
-      
+
       <main className="flex flex-col min-h-[100dvh] space-y-10">
         <PersonSchema />
         <section id="hero">
@@ -116,7 +133,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        
+
         <section id="about">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <h2 className="text-xl font-bold font-sans">About</h2>
@@ -131,17 +148,21 @@ export default function Page() {
         <section id="connect">
           <BlurFade delay={BLUR_FADE_DELAY * 4.5}>
             <div className="space-y-4">
-              <h2 className="text-xl font-bold font-sans">Let's collaborate 🤝🏻</h2>
+              <h2 className="text-xl font-bold font-sans">
+                Let's collaborate 🤝🏻
+              </h2>
               <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
-                {Object.entries(DATA.contact.social).map(([name, social], idx) => (
-                  <SocialIconLink
-                    key={name}
-                    name={name}
-                    url={social.url}
-                    icon={<social.icon />}
-                    delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
-                  />
-                ))}
+                {Object.entries(DATA.contact.social).map(
+                  ([name, social], idx) => (
+                    <SocialIconLink
+                      key={name}
+                      name={name}
+                      url={social.url}
+                      icon={<social.icon />}
+                      delay={BLUR_FADE_DELAY * 5 + idx * 0.05}
+                    />
+                  )
+                )}
               </div>
             </div>
           </BlurFade>
@@ -171,18 +192,20 @@ export default function Page() {
               <div className="flex flex-col space-y-4">
                 <BlogCard
                   post={{
-                    title: "Beyond the Basics: 10 Lesser-Known Facts About Solidity",
+                    title:
+                      "Beyond the Basics: 10 Lesser-Known Facts About Solidity",
                     publishedAt: "Mar 21, 2025",
                     summary: "some surprising facts in solidity.",
-                    slug: "solidity"
+                    slug: "solidity",
                   }}
                 />
                 <BlogCard
                   post={{
                     title: "Hash Collisions in Solidity and the Role of ABI",
                     publishedAt: "Mar 19, 2025",
-                    summary: "A comprehensive guide explaining Hash Collisions in Solidity",
-                    slug: "Collisions"
+                    summary:
+                      "A comprehensive guide explaining Hash Collisions in Solidity",
+                    slug: "Collisions",
                   }}
                 />
                 {/* <Link
@@ -202,7 +225,9 @@ export default function Page() {
 
         <section id="contributions">
           <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <h2 className="text-xl font-bold font-sans">GitHub Contributions</h2>
+            <h2 className="text-xl font-bold font-sans">
+              GitHub Contributions
+            </h2>
             <GithubContributions />
           </BlurFade>
         </section>
@@ -214,7 +239,10 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 8}>
               <div className="grid gap-4 sm:grid-cols-2">
                 {DATA.projects.slice(0, 4).map((project) => (
-                  <div key={project.title} className="relative overflow-hidden rounded-xl">
+                  <div
+                    key={project.title}
+                    className="relative overflow-hidden rounded-xl"
+                  >
                     <BorderBeam
                       duration={4}
                       size={300}
@@ -238,6 +266,44 @@ export default function Page() {
                   View All Projects →
                 </ShinyButton>
               </Link> */}
+            </BlurFade>
+          </div>
+        </section>
+        <section id="experience">
+          <div className="space-y-12 w-full py-12 font-sans">
+            <BlurFade delay={BLUR_FADE_DELAY * 13}>
+              <div className="flex flex-col items-center justify-center space-y-4 text-center">
+                <div className="space-y-2">
+                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                    Experience
+                  </div>
+                  {/* <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    I like building things
+                  </h2> 
+                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                    
+                  </p>  */}
+                </div>
+              </div>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 14}>
+              <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
+                {DATA.work.map((project, id) => (
+                  <BlurFade
+                    key={project.title + project.start}
+                    delay={BLUR_FADE_DELAY * 15 + id * 0.05}
+                  >
+                    <HackathonCardDynamic
+                      title={project.title}
+                      description={project.description}
+                      location={project.location}
+                      dates={project.start}
+                      image={project?.image}
+                      // links={project?.links}
+                    />
+                  </BlurFade>
+                ))}
+              </ul>
             </BlurFade>
           </div>
         </section>
@@ -303,17 +369,17 @@ export default function Page() {
           </div>
         </section>
 
-       
-
         <section id="contact">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-4 font-sans">
               <h2 className="text-xl font-bold">Contact</h2>
-              
+
               <p className="text-muted-foreground">
-                Always open to discussing new projects, creative ideas, or opportunities to be part of your visions. Feel free to reach out!
+                Always open to discussing new projects, creative ideas, or
+                opportunities to be part of your visions. Feel free to reach
+                out!
               </p>
-              
+
               <div className="mt-6 space-y-4">
                 <a
                   href="mailto:anudeepavula009@gmail.com"
@@ -341,7 +407,10 @@ export default function Page() {
             <div className="container mx-auto px-4">
               <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                 <div className="text-sm text-muted-foreground space-y-2">
-                  <p>© {new Date().getFullYear()} {DATA.name}. All rights reserved.</p>
+                  <p>
+                    © {new Date().getFullYear()} {DATA.name}. All rights
+                    reserved.
+                  </p>
                 </div>
               </div>
             </div>

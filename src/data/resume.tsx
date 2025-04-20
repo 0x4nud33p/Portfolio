@@ -10,11 +10,11 @@ export const DATA = {
   url: "https://github.com/0x4nud33p/portfolio",
   location: "Andhra Pradesh, India",
   locationLink: "https://www.google.com/maps/place/andhrapradesh",
-  description:
-    "A Full Stack Developer from India.",
+  description: "A Full Stack Developer from India.",
   summary:
     "A final year Information Technology student at [Seshadri Rao Gudlavalleru Engineering College](https://gecgudlavalleru.ac.in/index.php), specialize in modern web development and am actively working on [open-source projects](https://github.com/0x4nud33p?tab=repositories). I'm passionate about creating impactful solutions and sharing knowledge through my [technical blog](https://medium.com/@0x4nud33p) as well as on [X(Twitter)](https://x.com/0x4nud33p) too | Free-lancer.",
-  avatarUrl: "https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg",
+  avatarUrl:
+    "https://res.cloudinary.com/dbghbvuhb/image/upload/v1744607716/profileprofessional_nmfavf.jpg",
   skills: [
     "React",
     "Next.js",
@@ -38,7 +38,7 @@ export const DATA = {
       description: "",
       thumbnail: "",
       url: "",
-      date: ""
+      date: "",
     },
   ],
   navbar: [
@@ -96,15 +96,15 @@ export const DATA = {
   work: [
     {
       company: "MailCheap",
-      href: "",
-      badges: [],
-      location: "",
-      title: "",
-      logoUrl: "",
-      start: "",
-      end: "",
+      links: "",
+      badges: ["Next.js", "TypeScript", "MongoDB"],
+      location: "Remote",
+      title: "Full Stack Developer",
+      image: "/logos/mailcheap.png",
+      start: "Jan 2025 - Mar 2025",
+      // end: "Mar 2025",
       description:
-        "",
+        "Worked on building full-stack features using Next.js and integrated REST APIs. Collaborated on improving UI.",
     },
   ],
   education: [
@@ -150,7 +150,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744347121/sxafl0jua3fscb70f81b.mp4",
+      video:
+        "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744347121/sxafl0jua3fscb70f81b.mp4",
     },
     {
       title: "Chat-App",
@@ -183,7 +184,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      
+
       image: "",
       video:
         "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744519853/ozwx6ct1zjlmwbmj2k0d.mp4",
@@ -219,7 +220,8 @@ export const DATA = {
         },
       ],
       image: "",
-      video: "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744606950/wf6whxwdxvg8h41m9dnx.mp4",
+      video:
+        "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744606950/wf6whxwdxvg8h41m9dnx.mp4",
     },
     {
       title: "Coin Whiz",
@@ -258,8 +260,7 @@ export const DATA = {
       location: "Andhra Pradesh, India",
       description:
         "Developed a learing portal with some free education content with the best paid contents too, the project was called as 'EducationX'.",
-      image:
-        "",
+      image: "",
       mlh: "",
       links: [],
     },
