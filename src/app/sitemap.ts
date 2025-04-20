@@ -53,12 +53,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  const blogPosts = posts.map((post) => ({
+  const blogPosts = posts.map((post) => {
+  const publishedAt = new Date(post.metadata.publishedAt);
+  const isValidDate = !isNaN(publishedAt.getTime());
+
+  return {
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.metadata.publishedAt ?? new Date()),
+    lastModified: isValidDate ? publishedAt : new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
-  }));
+  };
+});
+
 
   return [...routes, ...blogPosts];
 }
