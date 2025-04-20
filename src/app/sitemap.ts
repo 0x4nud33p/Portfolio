@@ -1,28 +1,25 @@
 import { MetadataRoute } from 'next';
 import { getBlogPosts } from "@/data/blog";
-import { DATA } from "@/data/resume";
 import fs from 'fs';
 import path from 'path';
 
+export const runtime = 'nodejs';
+export const revalidate = 86400;
+
 const baseUrl = 'https://anudeepavula.vercel.app/';
 
-export const revalidate = 86400; // Revalidate once per day
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Get all blog posts
   const posts = await getBlogPosts();
-  
-  // Get file modification dates for static pages
+
   const getFileModDate = (filePath: string) => {
     try {
       const stats = fs.statSync(path.join(process.cwd(), filePath));
       return new Date(stats.mtime);
-    } catch (e) {
+    } catch {
       return new Date();
     }
   };
 
-  // Static routes with actual file modification dates
   const routes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
@@ -56,10 +53,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Add blog posts to sitemap
   const blogPosts = posts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: new Date(post.metadata.publishedAt),
+    lastModified: new Date(post.metadata.publishedAt ?? new Date()),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }));
