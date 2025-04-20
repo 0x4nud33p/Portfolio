@@ -270,7 +270,7 @@ export default function Page() {
           </div>
         </section>
         <section id="experience">
-          <div className="space-y-12 w-full py-12 font-sans">
+          <div className="space-y-8 w-full py-4 font-sans">
             <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
