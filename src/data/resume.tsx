@@ -252,6 +252,127 @@ export const DATA = {
       video:
         "https://res.cloudinary.com/dbghbvuhb/video/upload/v1744607299/gfjsv3vpzqobssus0dsc.mp4",
     },
+    {
+      title: "First-Fix",
+      href: "https://github.com/0x4nud33p/firstpick",
+      dates: "Apr 2025",
+      active: true,
+      description:
+        "Discover and contribute to beginner-friendly issues in open-source projects. Perfect for first-time contributors!",
+      technologies: [
+        "Typescript",
+        "Next.js",
+        "TailwindCSS",
+        "shadcn UI",
+        "Git",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/0x4nud33p/firstpick",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/0x4nud33p/firstpick",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Social-media-app",
+      href: "https://github.com/0x4nud33p/social-media-app",
+      dates: "March 2025",
+      active: true,
+      description: "A full-stack social media web application",
+      technologies: [
+        "Typescript",
+        "Prisma",
+        "PostgreSQL",
+        "Next.js",
+        "TailwindCSS",
+        "shadcn UI",
+        "Git",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/0x4nud33p/social-media-app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/0x4nud33p/social-media-app",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "BlogApp",
+      href: "https://github.com/0x4nud33p/Blog-App",
+      dates: "Nov 2024",
+      active: true,
+      description: "A blog application built using the MERN stack",
+      technologies: [
+        "Typescript",
+        "Reactjs",
+        "TailwindCSS",
+        "Expressjs",
+        "Nodejs",
+        "Git",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/0x4nud33p/Blog-App",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/0x4nud33p/Blog-App",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "PayEase",
+      href: "https://github.com/0x4nud33p/payease",
+      dates: "Jan 2025",
+      active: true,
+      description: "A simple clone of payment app",
+      technologies: [
+        "Typescript",
+        "Reactjs",
+        "TailwindCSS",
+        "Expressjs",
+        "Nodejs",
+        "Git",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://github.com/0x4nud33p/payease",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Source",
+          href: "https://github.com/0x4nud33p/payease",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
   ],
   hackathons: [
     {

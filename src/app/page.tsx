@@ -256,7 +256,7 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-              {/* <Link
+               <Link
                 href="/projects"
                 className="mt-4 block"
               >
@@ -265,7 +265,7 @@ export default function Page() {
                 >
                   View All Projects →
                 </ShinyButton>
-              </Link> */}
+              </Link> 
             </BlurFade>
           </div>
         </section>
