@@ -11,8 +11,8 @@ interface BlogPost {
 export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
-      // href={`/blog/${post.slug}`}
-      href={""}
+      href={`/blog/${post.slug}`}
+      // href={""}
       className="group block"
     >
       <article className="space-y-1">

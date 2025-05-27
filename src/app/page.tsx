@@ -270,19 +270,13 @@ export default function Page() {
           </div>
         </section>
         <section id="experience">
-          <div className="space-y-8 w-full py-4 font-sans">
+          <div className="space-y-8 w-full py-2 font-sans">
             <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
                   <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                     Experience
                   </div>
-                  {/* <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                    I like building things
-                  </h2> 
-                  <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                    
-                  </p>  */}
                 </div>
               </div>
             </BlurFade>
@@ -312,7 +306,7 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 13}>
               <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                  <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                  <div className="inline-block mb-2 rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                     Hackathons
                   </div>
                   <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">

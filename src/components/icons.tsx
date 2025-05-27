@@ -46,18 +46,12 @@ export const Icons = {
     </svg>
   ),
   leetcode: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
       <title>LeetCode</title>
-      <path
-        fill="currentColor"
-        d="M17.474 2.102a1.56 1.56 0 0 0-2.184.274L6.868 13.217a1.577 1.577 0 0 0 .289 2.213l8.289 6.421a1.56 1.56 0 0 0 1.893-2.491l-7.125-5.514 7.058-8.497a1.56 1.56 0 0 0-.258-2.247Z"
-      />
-      <path
-        fill="currentColor"
-        d="M4.39 11.895a1.56 1.56 0 1 0 0 3.12h9.776a1.56 1.56 0 1 0 0-3.12H4.39Z"
-      />
+      <path d="M17.5 2.1a1.5 1.5 0 0 0-2.1.3L7 13a1.5 1.5 0 0 0 .3 2.2l8.3 6.4a1.5 1.5 0 0 0 1.9-2.5L10.4 14l7-8.5a1.5 1.5 0 0 0-.2-2.4Z" />
+      <path d="M4.4 12a1.5 1.5 0 1 0 0 3h9.8a1.5 1.5 0 1 0 0-3H4.4Z" />
     </svg>
-  ),
+  ),  
   nextjs: (props: IconProps) => (
     <svg
       role="img"

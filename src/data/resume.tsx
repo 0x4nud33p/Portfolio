@@ -10,7 +10,7 @@ export const DATA = {
   url: "https://github.com/0x4nud33p/portfolio",
   location: "Andhra Pradesh, India",
   locationLink: "https://www.google.com/maps/place/andhrapradesh",
-  description: "A Full Stack Developer from India.",
+  description: "Software Developer from India.",
   summary:
     "A final year Information Technology student at [Seshadri Rao Gudlavalleru Engineering College](https://gecgudlavalleru.ac.in/index.php), specialize in modern web development and am actively working on [open-source projects](https://github.com/0x4nud33p?tab=repositories). I'm passionate about creating impactful solutions and sharing knowledge through my [technical blog](https://medium.com/@0x4nud33p) as well as on [X(Twitter)](https://x.com/0x4nud33p) too | Free-lancer.",
   avatarUrl:
@@ -105,6 +105,18 @@ export const DATA = {
       // end: "Mar 2025",
       description:
         "Worked on building full-stack features using Next.js and integrated REST APIs. Collaborated on improving UI.",
+    },
+    {
+      company: "Freelance",
+      links: "",
+      badges: ["Next.js", "TypeScript", "MongoDB"],
+      location: "Remote",
+      title: "Full Stack Developer (Freelance)",
+      image: "",
+      start: "Apr 2025 - Present",
+      // end: "Mar 2025",
+      description:
+        "Worked on various freelance projects, focusing on full-stack development using Next.js and TypeScript.",
     },
   ],
   education: [
