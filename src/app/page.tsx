@@ -193,10 +193,22 @@ export default function Page() {
                 <BlogCard
                   post={{
                     title:
+                      "EVM Internals Every Smart Contract Auditor Should Know",
+                    publishedAt: "May 23, 2025",
+                    summary:
+                      "From calldata to memory pointers become memory aware",
+                    slug: "solidity",
+                    link: "https://medium.com/@0x4nud33p/evm-internals-every-smart-contract-auditor-should-know-74e77e8a997e",
+                  }}
+                />
+                <BlogCard
+                  post={{
+                    title:
                       "Beyond the Basics: 10 Lesser-Known Facts About Solidity",
                     publishedAt: "Mar 21, 2025",
                     summary: "some surprising facts in solidity.",
                     slug: "solidity",
+                    link: "https://medium.com/@0x4nud33p/beyond-the-basics-10-lesser-known-facts-about-solidity-2950487d48ea",
                   }}
                 />
                 <BlogCard
@@ -206,6 +218,7 @@ export default function Page() {
                     summary:
                       "A comprehensive guide explaining Hash Collisions in Solidity",
                     slug: "Collisions",
+                    link: "https://medium.com/@0x4nud33p/hash-collisions-in-solidity-and-the-role-of-abi-e18335abe8d5",
                   }}
                 />
                 {/* <Link
@@ -256,16 +269,11 @@ export default function Page() {
                   </div>
                 ))}
               </div>
-               <Link
-                href="/projects"
-                className="mt-4 block"
-              >
-                <ShinyButton
-                  className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold"
-                >
+              <Link href="/projects" className="mt-4 block">
+                <ShinyButton className="w-full sm:w-auto group transition-all duration-300 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] font-semibold">
                   View All Projects →
                 </ShinyButton>
-              </Link> 
+              </Link>
             </BlurFade>
           </div>
         </section>

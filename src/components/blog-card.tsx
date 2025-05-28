@@ -6,13 +6,14 @@ interface BlogPost {
   publishedAt: string;
   summary: string;
   slug: string;
+  link?: string;
 }
 
 export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
-      href={`/blog/${post.slug}`}
-      // href={""}
+      href={`${post.link}`}
+      target="_blank"
       className="group block"
     >
       <article className="space-y-1">

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
-import { products } from '@/data/products';
 import Image from 'next/image';
 
 interface ProductPromotionProps {
@@ -13,22 +12,22 @@ export function ProductPromotion({ onClose }: ProductPromotionProps) {
   const [currentProductIndex, setCurrentProductIndex] = useState(0);
 
   // Rotate through featured products every 30 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentProductIndex((prev) => 
-        (prev + 1) % products.filter(p => p.featured).length
-      );
-    }, 30000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setCurrentProductIndex((prev) => 
+  //       (prev + 1) % products.filter(p => p.featured).length
+  //     );
+  //   }, 30000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
-  const featuredProducts = products.filter(p => p.featured);
-  const product = featuredProducts[currentProductIndex];
+  // const featuredProducts = products.filter(p => p.featured);
+  // const product = featuredProducts[currentProductIndex];
 
-  if (!product) return null;
+  // if (!product) return null;
 
-  const discount = Math.round(((product.mrp - product.sellingPrice) / product.mrp) * 100);
+  // const discount = Math.round(((product.mrp - product.sellingPrice) / product.mrp) * 100);
 
   return (
     <div className="relative w-full bg-background border rounded-lg shadow-lg p-3 sm:p-4">
@@ -46,31 +45,31 @@ export function ProductPromotion({ onClose }: ProductPromotionProps) {
       <div className="space-y-2">
         <div className="flex items-start gap-2">
           <div className="w-16 h-16 rounded overflow-hidden flex-shrink-0 relative">
-            <Image 
+            {/* <Image 
               src={product.imageUrl} 
               alt={product.title}
               fill
               sizes="64px"
               className="object-cover"
-            />
+            /> */}
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-xs sm:text-sm line-clamp-2">{product.title}</h3>
-            <p className="text-green-600 text-xs font-medium">{discount}% OFF</p>
+            {/* <h3 className="font-semibold text-xs sm:text-sm line-clamp-2">{product.title}</h3>
+            <p className="text-green-600 text-xs font-medium">{discount}% OFF</p> */}
           </div>
         </div>
         
-        <p className="text-xs text-muted-foreground line-clamp-2">
+        {/* <p className="text-xs text-muted-foreground line-clamp-2">
           {product.description}
         </p>
         
         <div className="flex items-center gap-2">
           <span className="text-xs sm:text-sm font-bold">₹{product.sellingPrice}</span>
           <span className="text-xs text-muted-foreground line-through">₹{product.mrp}</span>
-        </div>
+        </div> */}
         
         <a
-          href={product.amazonLink}
+          // href={product.amazonLink}
           target="_blank"
           rel="noopener noreferrer"
           className="block w-full bg-amber-500 text-black text-center py-1.5 sm:py-2 rounded-md hover:bg-amber-400 transition-colors text-xs sm:text-sm font-medium"
